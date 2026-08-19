@@ -1,0 +1,30 @@
+# Runtime data
+logs/
+*.log
+raw/
+
+# Local diagnostic state
+tls/cert_diagnostics_state.json
+tls/cert_cycle_state.txt
+
+# Researcher-supplied historical Sony/SCEE certificate material
+tls/scee_mis_root_2002.der
+tls/scee_mis_root_2002.pem
+tls/beta_test_ca_43.194.211.76.der
+tls/beta_test_ca_43.194.211.76.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Packet captures may contain identifying data
+*.pcap
+*.pcapng
