@@ -11,7 +11,7 @@ The public EyeToy HTTP endpoint is **plain HTTP on port 10443**. There is no
 TLS listener in this deployment profile. Apache does not need to terminate
 TLS for EyeToy Chat.
 
-The Python server therefore does not bind :80, :443, :10443 or :53.
+The Python server therefore does not bind 80,443,10443 or53.
 
 ## DNS
 
