@@ -1,0 +1,11 @@
+EyeToy Chat historical HTTPS trust anchor extracted from Europe Beta 2004-05-10
+Source runtime blob: MAINGAME.DBN address 0x01A87850, length 0x522 (1314 bytes PEM including NUL)
+Subject: 1.2.840.113549.1.9.1=infosec@scee.net,CN=Information Security Team,OU=SCEE MIS,O=SCEE,L=London,ST=England,C=UK
+Issuer: 1.2.840.113549.1.9.1=infosec@scee.net,CN=Information Security Team,OU=SCEE MIS,O=SCEE,L=London,ST=England,C=UK
+Valid from: 2002-09-19T12:20:08+00:00
+Valid until: 2012-09-16T12:20:08+00:00
+SHA1: 114a7be0a9f99d28d88f726e90b84cbc289c5861
+SHA256: a5a51101510370e956beb301a61d3873078a6070c67750640ad2b437fb4fb358
+Public key: RSA 1024 bits, exponent 65537
+Signature hash: md5
+Private key: NOT present on the client disc. This certificate is a trust anchor, not a usable server identity by itself.

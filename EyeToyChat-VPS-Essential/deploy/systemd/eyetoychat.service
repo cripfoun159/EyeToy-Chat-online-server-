@@ -1,0 +1,14 @@
+[Unit]
+Description=EyeToy Chat Community Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/eyetoychat
+ExecStart=/usr/bin/python3 /opt/eyetoychat/server.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
