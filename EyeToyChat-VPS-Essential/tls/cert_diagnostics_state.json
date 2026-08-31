@@ -3,9 +3,16 @@
   "accepted_profile": null,
   "attempts": 0,
   "profiles": {
-    "v086_update_2000_2049": "untested"
+    "v086_update_2000_2049": "rejected"
   },
-  "history": [],
-  "last_selected": null,
-  "last_result": null
+  "history": [
+    {
+      "time": "2026-08-31T13:56:36+00:00",
+      "profile": "v086_update_2000_2049",
+      "result": "rejected",
+      "detail": "level=2 description=46 (certificate_unknown)"
+    }
+  ],
+  "last_selected": "v086_update_2000_2049",
+  "last_result": "rejected"
 }

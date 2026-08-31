@@ -16,7 +16,8 @@
     10075,
     10077,
     10078,
-    10080
+    10080,
+    18080
   ],
   "udp_probe_ports": [
     10070,
@@ -26,7 +27,7 @@
     10078,
     10080
   ],
-  "http_port": 10443,
+  "http_port": 18080,
   "log_payload_limit": 16384,
   "log_dir": "logs",
   "dnas_names": [
@@ -39,11 +40,11 @@
   ],
   "dnas_dns_timeout": 3.0,
   "http_plain_ports": [
-    10443
+    18080
   ],
-  "update_mode": "no_update",
+  "update_mode": "v087a_fix2",
   "update_build": 194,
-  "update_fixed_port": 80,
+  "update_fixed_port":10443,
   "muis_candidate_port": 10080,
   "netstat_watch": true,
   "muis_exact_port": 10080,
@@ -395,10 +396,10 @@
   ],
   "v086_note": "V085 traces proved server-only TLS impossible in 2026 with recovered historical keys. V086 combines DNAS21 mode 4 with a same-size public trust-anchor replacement and four three-level TEXT256 test rooms.",
   "dns_enabled": false,
-  "http_bind_ip": "0.0.0.0",
+  "http_bind_ip": "127.0.0.1",
   "vmail_chatroom_inbox_size": 5,
   "v087_public_deployment": true,
-  "v087_public_note": "Public VPS profile: BIND9 provides DNS; Python server binds directly to all ports including 10443. No Apache reverse proxy needed.",
+  "v087_public_note": "Public VPS profile: BIND9 provides DNS; Apache2 proxies plain HTTP :10443 to local HTTP :18080; Medius listeners remain directly reachable on their historical ports.",
   "public_http_port": 10443,
   "public_http_scheme": "http"
 }
