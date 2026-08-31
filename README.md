@@ -65,6 +65,13 @@ The ISO research additions include capture/diagnostic support for:
 These research paths are intentionally capture-driven. The server does not
 invent unverified DME, StreamMedia or game packet responses.
 
+## Firewall
+
+    sudo ufw allow 10070/udp comment 'EyeToy Medius NAT'
+    sudo ufw allow 10075/tcp comment 'EyeToy MAS'
+    sudo ufw allow 10078/tcp comment 'EyeToy MLS'
+    sudo ufw allow 10443/tcp comment 'EyeToy Update HTTP'
+
 ## Public repository hygiene
 
 Do not commit:
