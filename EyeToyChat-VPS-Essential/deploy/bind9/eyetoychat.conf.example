@@ -1,8 +1,0 @@
-; Add these records to the existing BIND9 zone used by the VPS.
-; Replace YOUR_VPS_IP with the public IPv4 of the VPS.
-;
-; The three names must resolve to the same VPS:
-;
-eyetoychat-master.online.scee.com.  IN A YOUR_VPS_IP
-eyetoychat-update.online.scee.com.  IN A YOUR_VPS_IP
-vmail.online.scee.com.              IN A YOUR_VPS_IP
