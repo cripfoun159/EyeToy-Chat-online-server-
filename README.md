@@ -70,6 +70,7 @@ invent unverified DME, StreamMedia or game packet responses.
     sudo ufw allow 10070/udp comment 'EyeToy Medius NAT'
     sudo ufw allow 10075/tcp comment 'EyeToy MAS'
     sudo ufw allow 10078/tcp comment 'EyeToy MLS'
+    sudo ufw allow 10080/tcp comment 'EyeToy MUIS'
     sudo ufw allow 10443/tcp comment 'EyeToy Update HTTP'
 
 ## Public repository hygiene
