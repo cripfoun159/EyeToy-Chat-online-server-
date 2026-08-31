@@ -15,28 +15,13 @@ The Python server therefore does not bind 80,443,10443 or53.
 
 ## DNS
 
-Add these three A records to the existing BIND9 configuration:
+For DNS we use Bind9. The following domains needs to be changed:
 
-- `eyetoychat-master.online.scee.com`
-- `eyetoychat-update.online.scee.com`
-- `vmail.online.scee.com`
+    eyetoychat-master.online.scee.com
+    eyetoychat-update.online.scee.com
+    vmail.online.scee.com
 
-They should point to the VPS public IPv4.
-
-See `deploy/bind9/eyetoychat.conf.example`.
-
-## Apache2
-
-Enable the normal reverse-proxy modules:
-
-```sh
-a2enmod proxy proxy_http
-```
-
-Install the example vhost from `deploy/apache2/eyetoychat-10443.conf`, then reload
-Apache.
-
-Port 10443 is deliberately not an SSL virtual host.
+Read [here](deploy/dns/Readme.md) more about it.
 
 ## Server
 
@@ -79,6 +64,13 @@ The ISO research additions include capture/diagnostic support for:
 
 These research paths are intentionally capture-driven. The server does not
 invent unverified DME, StreamMedia or game packet responses.
+
+## Firewall
+
+    sudo ufw allow 10070/udp comment 'EyeToy Medius NAT'
+    sudo ufw allow 10075/tcp comment 'EyeToy MAS'
+    sudo ufw allow 10078/tcp comment 'EyeToy MLS'
+    sudo ufw allow 10443/tcp comment 'EyeToy Update HTTP'
 
 ## Public repository hygiene
 
