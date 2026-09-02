@@ -4261,6 +4261,13 @@ def handle_muis_v014(conn, addr, cfg):
                             log_event(cfg, "MUIS-UNIVERSE-REQ",
                                       f"MediusGetUniverseInformationRequest: MessageID={mid_print!r}; InfoType=0x{info:08X} [{flags}]; CharacterEncoding={req['character_encoding']}; Language={req['language']}; extra={len(req['extra'])}", plain)
 
+                            if info & INFO_NEWS:
+                                n_payload = make_universe_news_response(req["message_id"], news, end_of_list=True)
+                                n_frame = scert_make_encrypted(10, n_payload, rc_key, CTX_RC_CLIENT_SESSION)
+                                conn.sendall(n_frame)
+                                log_event(cfg, "MUIS-NEWS-TX", f"UniverseNewsResponse envoyé; News={news!r}; EndOfList=1", n_payload)
+                                log_event(cfg, "MUIS-NEWS-TX-SCERT", "RT_MSG_SERVER_APP chiffré envoyé (UniverseNewsResponse)", n_frame)
+
                             u_payload = make_universe_variable_information_response(
                                 req["message_id"], info, endpoint, next_port, uname, udesc,
                                 universe_id=int(cfg.get("universe_id", 1)),
@@ -4275,12 +4282,8 @@ def handle_muis_v014(conn, addr, cfg):
                                       u_payload)
                             log_event(cfg, "MUIS-UNIVERSE-TX-SCERT", "RT_MSG_SERVER_APP chiffré envoyé (UniverseVariableInformationResponse)", u_frame)
 
-                            if info & INFO_NEWS:
-                                n_payload = make_universe_news_response(req["message_id"], news, end_of_list=True)
-                                n_frame = scert_make_encrypted(10, n_payload, rc_key, CTX_RC_CLIENT_SESSION)
-                                conn.sendall(n_frame)
-                                log_event(cfg, "MUIS-NEWS-TX", f"UniverseNewsResponse envoyé; News={news!r}; EndOfList=1", n_payload)
-                                log_event(cfg, "MUIS-NEWS-TX-SCERT", "RT_MSG_SERVER_APP chiffré envoyé (UniverseNewsResponse)", n_frame)
+
+                            
 
                             log_event(cfg, "MUIS-STAGE", f"UniverseInformation répondue. EyeToy Chat est orienté vers {endpoint}:{next_port}; attente de la connexion au service suivant.")
                         except Exception as e:
