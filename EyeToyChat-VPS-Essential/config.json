@@ -1,4 +1,5 @@
 {
+  "_runtime_advertise_ip": "128.140.0.23",
   "bind_ip": "0.0.0.0",
   "advertise_ip": "auto",
   "dns_port": 53,
@@ -16,7 +17,8 @@
     10075,
     10077,
     10078,
-    10080
+    10080,
+    10443
   ],
   "udp_probe_ports": [
     10070,
@@ -41,9 +43,9 @@
   "http_plain_ports": [
     10443
   ],
-  "update_mode": "no_update",
+  "update_mode": "v087a_fix2",
   "update_build": 194,
-  "update_fixed_port": 80,
+  "update_fixed_port":10443,
   "muis_candidate_port": 10080,
   "netstat_watch": true,
   "muis_exact_port": 10080,
@@ -398,7 +400,7 @@
   "http_bind_ip": "0.0.0.0",
   "vmail_chatroom_inbox_size": 5,
   "v087_public_deployment": true,
-  "v087_public_note": "Public VPS profile: BIND9 provides DNS; Python server binds directly to all ports including 10443. No Apache reverse proxy needed.",
+  "v087_public_note": "Public VPS profile: BIND9 provides DNS; Apache2 proxies plain HTTP :10443 to local HTTP :18080; Medius listeners remain directly reachable on their historical ports.",
   "public_http_port": 10443,
   "public_http_scheme": "http"
 }
