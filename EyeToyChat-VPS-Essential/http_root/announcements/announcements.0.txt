@@ -1,1 +1,1 @@
-EyeToy Chat local server V002
+EyeToy Chat 
