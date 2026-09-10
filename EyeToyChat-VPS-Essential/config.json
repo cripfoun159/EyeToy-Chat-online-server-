@@ -45,7 +45,7 @@
   ],
   "update_mode": "v087a_fix2",
   "update_build": 194,
-  "update_fixed_port":10443,
+  "update_fixed_port": 10443,
   "muis_candidate_port": 10080,
   "netstat_watch": true,
   "muis_exact_port": 10080,
@@ -154,7 +154,7 @@
   "mls_version_string": "Medius Lobby Server Version 1.51.0001",
   "mls_lobby_name": "Default",
   "mls_active_player_count": 1,
-  "mls_max_players": 32,
+  "mls_max_players": 256,
   "mls_announcement_id": 1,
   "mls_announcement_text": "Welcome to EyeToy Chat Europe",
   "vmail_hostname": "vmail.online.scee.com",
@@ -197,7 +197,7 @@
   "v059_default_channel_id": 1,
   "v059_default_channel_name": "Default",
   "v059_default_channel_type": "Lobby",
-  "v059_default_channel_max_players": 32,
+  "v059_default_channel_max_players": 256,
   "v059_default_channel_player_count": 1,
   "v059_default_channel_game_world_count": 0,
   "v059_default_channel_security_level": 0,
@@ -367,30 +367,6 @@
       "category": "General",
       "title": "General",
       "world_id": 1,
-      "type": "TEXT256",
-      "icon": 0
-    },
-    {
-      "language": "Francais",
-      "category": "Sport",
-      "title": "Sport",
-      "world_id": 2,
-      "type": "TEXT256",
-      "icon": 0
-    },
-    {
-      "language": "English",
-      "category": "General",
-      "title": "General",
-      "world_id": 3,
-      "type": "TEXT256",
-      "icon": 0
-    },
-    {
-      "language": "English",
-      "category": "Sport",
-      "title": "Sport",
-      "world_id": 4,
       "type": "TEXT256",
       "icon": 0
     }
