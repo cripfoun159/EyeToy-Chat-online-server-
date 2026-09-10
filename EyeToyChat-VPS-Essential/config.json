@@ -369,6 +369,22 @@
       "world_id": 1,
       "type": "TEXT256",
       "icon": 0
+    },
+    {
+      "language": "Francais",
+      "category": "General",
+      "title": "Chat Francais",
+      "world_id": 1,
+      "type": "TEXT256",
+      "icon": 0
+    },
+    {
+      "language": "English",
+      "category": "General",
+      "title": "Chat English",
+      "world_id": 1,
+      "type": "TEXT256",
+      "icon": 0
     }
   ],
   "v086_note": "V085 traces proved server-only TLS impossible in 2026 with recovered historical keys. V086 combines DNAS21 mode 4 with a same-size public trust-anchor replacement and four three-level TEXT256 test rooms.",
